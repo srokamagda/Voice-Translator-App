@@ -1,0 +1,7 @@
+{
+  "name": "voice-translator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
