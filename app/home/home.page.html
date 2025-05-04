@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary"></ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="page-container">
+    <h1 class="title">{{ 'Voice Translator' | translate }}</h1>
+
+    
+      <ion-button expand="block" (click)="startTranslation()" color="success">
+        🎤 {{ 'MIC' | translate }}
+      </ion-button>
+    
+
+    
+      <ion-item lines="none">
+        <ion-label>{{ 'Select a language:' | translate }}</ion-label>
+        <ion-select [(ngModel)]="targetLang" interface="popover">
+          <ion-select-option value="es">Spanish</ion-select-option>
+          <ion-select-option value="pl">Polish</ion-select-option>
+          <ion-select-option value="de">German</ion-select-option>
+          <ion-select-option value="fr">French</ion-select-option>
+          <ion-select-option value="it">Italian</ion-select-option>
+          <ion-select-option value="ar">Arabic</ion-select-option>
+          <ion-select-option value="zh">Chinese (Simplified)</ion-select-option>
+          <ion-select-option value="ja">Japanese</ion-select-option>
+          <ion-select-option value="ko">Korean</ion-select-option>
+          <ion-select-option value="ru">Russian</ion-select-option>
+          <ion-select-option value="pt">Portuguese</ion-select-option>
+          <ion-select-option value="hi">Hindi</ion-select-option>
+          <ion-select-option value="bn">Bengali</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+    
+
+    <ion-card *ngIf="translatedText">
+      <ion-card-header>
+        <ion-card-title>{{ 'Translation:' | translate }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ translatedText }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
